@@ -1,3 +1,6 @@
+# Doom - Bot
+**A mulit-purpose discord bot, built to be hosted locally.**
+
 I'm not sure what to put in here or whether what I'm going to write is the correct way to state these ideas, any help would be appreciated:
 ***
 
