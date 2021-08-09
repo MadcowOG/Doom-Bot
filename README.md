@@ -3,7 +3,7 @@ I'm not sure what to put in here or whether what I'm going to write is the corre
 
 
 # Prologue
-Please use this bot as you like, at the moment it is built to be hosted locally. But it is still a work in progress, so I would enjoy it if you provided some feedback and contributed a little.
+Please use this bot as you like, at the moment it is built to be hosted locally. But it is still a work in progress, so I would enjoy it if you provided some feedback and contributed a little. I am not sure what license to use, and I am not a lawyer nor do I have one, so I am just going with GPLv2
 
 # Prerequisites
 * _Optional:_
