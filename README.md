@@ -6,7 +6,7 @@ I'm not sure what to put in here or whether what I'm going to write is the corre
 
 
 # Prologue
-Please use this bot as you like, at the moment it is built to be hosted locally. But it is still a work in progress, so I would enjoy it if you provided some feedback and contributed a little. I am not sure what license to use, and I am not a lawyer nor do I have one, so I am just going with GPLv2
+Please use this bot as you like, at the moment it is built to be hosted locally. But it is still a work in progress, so I would enjoy it if you provided some feedback and contributed a little. I am not sure what license to use, and I am not a lawyer nor do I have one, so I am just going with GPLv2. I have not tested this version posted, on Windows yet, although I used previous versions in the past. But this does not mean it works, any help with this would be appreciated.
 
 # Prerequisites
 * _Optional:_
@@ -14,7 +14,7 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
         * `python3 -m venv venv`
         * `source ./venv/bin/activate`
 * Must have the latest version of Python, and ffmpeg, install these with your distros package manager
-* Libraries required, <span>discord.py<span>\[audio\], youtube_dl install with these commands:
+* Libraries required, <span>discord.py<span>\[audio\], youtube_dl install with this command:
     * `pip install 'discord.py[audio]' youtube_dl`
 
 # Setup
