@@ -14,18 +14,18 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
 
 2. Extract this to somewhere and make sure it won't be deleted and **copy the path of the ffmpeg exes** in the bin directory of the ffmpeg extract.
 
-3. Type path into the search bar on your desktop, or press the windows button on your keyboard and do the same. You will see **Edit environment variables**, open this.
+3. Type the word **path** into the search bar on your desktop, or press the windows button on your keyboard and do the same. You will see **Edit environment variables**, open this.
 
-4. A **System Properties** window will open, in the **Advanced tab** click on **Environment Variables** towards the bottom of the window.
+4. A **System Properties** window will open, in the **Advanced tab** click on **Environment Variables** button towards the bottom of the window.
 
-5. A **Environment Variables** window will open, under the **System Variables** section to the bottom of the window, scroll through this section until you see **Path**, double click this.
+5. An **Environment Variables** window will open, under the **System Variables** section to the bottom of the window, scroll through this section until you see **Path**, double click this.
 
 6. The **Edit environment variable** window will open, to the top right of the window there will be a button labelled **New**, click this and the paste the path of the ffmpeg exes you copied from earlier
 
-7. You may test ffmeg by opening a command prompt and typing ffmpeg. If the first line reads the **ffmpeg version** then you have successfully installed ffmpeg.
+7. You may test ffmeg by opening a command prompt(Type cmd into the windows search bar) and typing ffmpeg. If the first line reads the **ffmpeg version** then you have successfully installed ffmpeg.
 
 * Libraries required, <span>discord.py<span>\[audio\], youtube_dl install with this command:
-    * `pip install 'discord.py[audio]' youtube_dl`
+    * `pip install "discord.py[audio]" youtube_dl`
 
 # Prerequisites on other platforms
 * Must have the latest version of Python, and ffmpeg, these may be intalled with your OS's package manager.
