@@ -37,7 +37,7 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
 * Libraries required, <span>discord.py<span>\[audio\], youtube_dl install with this command:
     * `pip install 'discord.py[audio]' youtube_dl`
 
-# Invite Bot to server
+# Invite Bot to Server
 
 You will need to invite the bot to your server before being able to run it:
 
