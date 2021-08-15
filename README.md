@@ -35,7 +35,7 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
         * `source ./venv/bin/activate`
 
 * Libraries required, <span>discord.py<span>\[audio\], youtube_dl install with this command:
-    * `pip install 'discord.py[audio]' youtube_dl`
+    * `pip install "discord.py[audio]" youtube_dl`
 
 # Setup
 1. Add to tokens.json
