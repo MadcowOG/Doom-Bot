@@ -438,7 +438,6 @@ async def play(ctx, *, song=''):
             print(f'{song} is not in the local library: from {ctx.message.guild.name}')
 
 
-
 @play.error
 async def clear_error(ctx, error):
     print(error)
