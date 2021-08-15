@@ -76,17 +76,17 @@ async def on_ready():
 
 @bot.event
 # Adds new server to server_prefixes.json on join
-async def on_guild_join(ctx, guild):
+async def on_guild_join(guild):
     # Opens server server_prefixes.json
     with open('server_prefixes.json', 'r') as f:
         prefixes = json.load(f)
-    # Adds new server to json and makes prefix .
+    # Adds new server to json and makes prefix a period
     prefixes[str(guild.id)] = '.'
     with open('server_prefixes.json', 'w') as f:
         json.dump(prefixes, f, indent=5)
     with open('INTRO.txt', 'r') as doom:
         DOOM = '\n'.join(doom.readlines())
-        await ctx.send(f'> {DOOM.center(1)}')
+        await guild.text_channels[0].send(f'> {DOOM.center(1)}')
 
 
 @bot.event
