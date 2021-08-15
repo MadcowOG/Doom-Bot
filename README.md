@@ -37,33 +37,6 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
 * Libraries required, <span>discord.py<span>\[audio\], youtube_dl install with this command:
     * `pip install 'discord.py[audio]' youtube_dl`
 
-# Invite Bot to Server
-
-You will need to invite the bot to your server before being able to run it:
-
-1. Go to the [discord developer portal](https://discord.com/developers/applications) and sign in.
-
-2. Then while in the **Applications Tab** click **New Application** in the top right of the window.
-
-3. Name application whatever you'd like, preferably Doom(or a variation of it, as there are no similar names for apps), then click create.
-
-4. Once in the application menu switch to the **Bot Tab** located on the left of the window.
-
-5. Click the **Add Bot** button on the right of the window.
-
-6. There will be a **Token** label copy this token with the correlated button labelled **Copy** and keep it temporarily, keep this safe as anyone can run code with your bot if they have it.
-
-7. _Optional:_
-    * You may customize the name and icon of the bot as you wish
-
-8. Go to the **OAuth2 tab** on the left of the window.
-
-9. In here you will see a **Scopes section** click the **bot** check box. 
-
-10. Then a **Bot Premissions section** and click the **Adminstrator** check box (You may check specific boxes besides Administrator if you understand which are required and which aren't, but this may break the bot or some functionalities of it).
-
-11. You will see under the **Scopes section** that there is a link generated, open this link and sign in with your discord, and add fill in the server that you would like the bot to be in, under the **Add to Server** tab. If the bot joins that server you have successfully added the bot and you use that token from earlier in the next **Setup** steps.
-
 # Setup
 1. Add to tokens.json
     * In tokens.json format your tokens inside the json brackets: {} like this:
@@ -97,3 +70,30 @@ You will need to invite the bot to your server before being able to run it:
 4. View the Command List
     *  Use the .cl or .cls command
     * Or the .help command
+
+# Invite Bot to Server
+
+You will need to invite the bot to your server before being able to run it:
+
+1. Go to the [discord developer portal](https://discord.com/developers/applications) and sign in.
+
+2. Then while in the **Applications Tab** click **New Application** in the top right of the window.
+
+3. Name application whatever you'd like, preferably Doom(or a variation of it, as there are no similar names for apps), then click create.
+
+4. Once in the application menu switch to the **Bot Tab** located on the left of the window.
+
+5. Click the **Add Bot** button on the right of the window.
+
+6. There will be a **Token** label copy this token with the correlated button labelled **Copy** and keep it temporarily, keep this safe as anyone can run code with your bot if they have it.
+
+7. _Optional:_
+    * You may customize the name and icon of the bot as you wish
+
+8. Go to the **OAuth2 tab** on the left of the window.
+
+9. In here you will see a **Scopes section** click the **bot** check box. 
+
+10. Then a **Bot Premissions section** and click the **Adminstrator** check box (You may check specific boxes besides Administrator if you understand which are required and which aren't, but this may break the bot or some functionalities of it).
+
+11. You will see under the **Scopes section** that there is a link generated, open this link and sign in with your discord, and add fill in the server that you would like the bot to be in, under the **Add to Server** tab. If the bot joins that server you have successfully added the bot and you use that token from earlier in the next **Setup** steps.
