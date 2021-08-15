@@ -24,7 +24,7 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
 
 7. You may test ffmeg by opening a command prompt(Type cmd into the windows search bar) and typing ffmpeg. If the first line reads the **ffmpeg version** then you have successfully installed ffmpeg.
 
-* Libraries required, <span>discord.py<span>\[audio\], youtube_dl install with this command:
+* Libraries required are, <span>discord.py<span>\[audio\], youtube_dl install them by using this command in powershell:
     * `pip install "discord.py[audio]" youtube_dl`
 
 # Prerequisites on other platforms
@@ -34,7 +34,7 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
         * `python3 -m venv venv`
         * `source ./venv/bin/activate`
 
-* Libraries required, <span>discord.py<span>\[audio\], youtube_dl install with this command:
+* Libraries required are, <span>discord.py<span>\[audio\], youtube_dl install them in the terminal with this command:
     * `pip install "discord.py[audio]" youtube_dl`
 
 # Setup
