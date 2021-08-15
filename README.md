@@ -65,15 +65,12 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
   ]
  }
  ```
-3. Add songs to the music directory
-    * Any songs added to the music directory manually must be mp3 and be in lowercase
-4. View the Command List
-    *  Use the .cl or .cls command
-    * Or the .help command
+* Any songs added to the music directory manually must be mp3 and be in lowercase
+
 
 # Invite Bot to Server
 
-You will need to invite the bot to your server before being able to run it:
+You will need to make sure that the bot is running when it joins the server:
 
 1. Go to the [discord developer portal](https://discord.com/developers/applications) and sign in.
 
@@ -97,3 +94,5 @@ You will need to invite the bot to your server before being able to run it:
 10. Then a **Bot Premissions section** and click the **Adminstrator** check box (You may check specific boxes besides Administrator if you understand which are required and which aren't, but this may break the bot or some functionalities of it).
 
 11. You will see under the **Scopes section** that there is a link generated, open this link and sign in with your discord, and add fill in the server that you would like the bot to be in, under the **Add to Server** tab. If the bot joins that server you have successfully added the bot and you use that token from earlier in the next **Setup** steps.
+
+12. **Congrats your bot has been setup, if there are any issues please submit a ticket on the Github**
