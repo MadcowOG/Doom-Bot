@@ -76,12 +76,12 @@ async def on_ready():
 
 @bot.event
 # Adds new server to server_prefixes.json on join
-async def on_guild_join(ctx, guild):
+async def on_guild_join(ctx):
     # Opens server server_prefixes.json
     with open('server_prefixes.json', 'r') as f:
         prefixes = json.load(f)
     # Adds new server to json and makes prefix .
-    prefixes[str(guild.id)] = '.'
+    prefixes[str(discord.guild.id)] = '.'
     with open('server_prefixes.json', 'w') as f:
         json.dump(prefixes, f, indent=5)
     with open('INTRO.txt', 'r') as doom:
