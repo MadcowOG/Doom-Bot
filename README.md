@@ -66,7 +66,7 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
  }
  ```
 * Any songs added to the music directory manually must be mp3 and be in lowercase
-
+* If on **Windows** make sure that when **starting the bot**, you are using **powershell** and in the **same directory as the bot**.
 
 # Invite Bot to Server
 
