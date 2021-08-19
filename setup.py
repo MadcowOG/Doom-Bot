@@ -23,6 +23,11 @@ with open('bot_start', 'r') as file:
 text = 'Setup'
 final = text.center(61, '=')
 print(f'{final}')
+text = 'NOTE'
+final = text.center(200, '-')
+print(final)
+print('If you input incorrect information the bot will not work correctly use the reset script to return the file to their original state, if you know you may do it yourself')
+print(final)
 token_name = input('What name would you like for your token? ')
 token = input('What is your token? ')
 bool_whitelist = input('Would you like to configure the command whitelist? ')
