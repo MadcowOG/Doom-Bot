@@ -14,7 +14,6 @@ import random
 import os
 import json
 import youtube_dl
-import math
 
 
 # Queries server_prefixes.json file for prefixes based on guild id
@@ -527,7 +526,7 @@ async def search(ctx, *, terms):
     print(video['duration'] / 60)
     print(video['title'])
     await ctx.message.channel.send(f'**Title**: {title}')
-    await ctx.message.channel.send(f'**Duration**: {str(int(math.ceil(duration)))}')
+    await ctx.message.channel.send(f'**Duration**: {str(round(duration, 2))}')
     await ctx.message.channel.send(f'**Url**: {url}')
 
 
