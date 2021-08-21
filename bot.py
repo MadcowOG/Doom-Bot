@@ -794,9 +794,9 @@ with open('tokens.json', 'r') as file:
     tokens = json.load(file)
     correct_val = False
     while correct_val is False:
-        try:
+        if t_choice in tokens:
             bot.run(tokens[t_choice])
             correct_val = True
-        except KeyError:
+        else:
             print('!!Not valid input!!')
             t_choice = input('What token do you want to run? ')
