@@ -1,4 +1,4 @@
-import json, sys
+import json, sys, subprocess
 
 def setup(token, token_name, whitelist_user=None, whitelist_server=None, whitelist_bool=False):
     with open('tokens.json', 'r') as file:
@@ -13,9 +13,14 @@ def setup(token, token_name, whitelist_user=None, whitelist_server=None, whiteli
         whitelist["servers"] = [whitelist_server]
         with open('whitelist.json', 'w') as file:
             json.dump(whitelist, file, indent=5)
-            return print('Thank you')
-    else:
+        p = subprocess.Popen(['powershell.exe', 'setup.ps1'], stdout=sys.stdout)
+        p.communicate()
         return print('Thank you')
+    else:
+        p = subprocess.Popen(['powershell.exe', 'setup.ps1'], stdout=sys.stdout)
+        p.communicate()
+        return print('Thank you')
+
 
 with open('bot_start', 'r') as file:
     DOOM = file.read()
