@@ -6,4 +6,4 @@ cd ffmpeg
 cd 'ffmpeg-n4.4-80-gbf87bdd3f6-win64-gpl-4.4'
 cd bin
 $variable = Get-Location
-$env:Path += $variable
+$env:Path += ;$variable
