@@ -8,6 +8,6 @@ cd bin
 $variable =  Get-Location
 $newvariable = (';'+$variable)
 # TODO! Get this to add to the system environment variable 'Path' while also including previous additions
-$Path = [Environment]::GetEnvironmentVariable("Path", "Machine")
+$Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
 $NewPath = $Path + $newvariable
 [System.Environment]::SetEnvironmentVariable("Path", $NewPath, "Machine")
