@@ -6,6 +6,7 @@ cd ffmpeg
 cd 'ffmpeg-n4.4-80-gbf87bdd3f6-win64-gpl-4.4'
 cd bin
 $variable =  Get-Location
-$Environment = [System.Environment]::GetEnvirontmentVariable("Path", "Machine")
-$Environment = $Environment.Insert($Environment.Length, $variable)
-[System.Environment]::SetEnvironmentVariable("Path", $Environment, "Machine")
+$newvariable = (';'+$variable)
+$Environment = [Environment]::GetEnvirontmentVariable("Path", "Machine")
+$NewPath = $Environment + $newvariable
+[System.Environment]::SetEnvironmentVariable("Path", $NewPath, "Machine")
