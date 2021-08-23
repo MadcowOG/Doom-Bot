@@ -17,7 +17,7 @@ def setup(token, token_name, whitelist_user=None, whitelist_server=None, whiteli
         p.communicate()
         return print('Thank you')
     else:
-        p = subprocess.Popen(['powershell.exe', 'setup.ps1'], stdout=sys.stdout)
+        p = subprocess.Popen(['powershell.exe', './setup.ps1'], stdout=sys.stdout)
         p.communicate()
         return print('Thank you')
 
@@ -31,7 +31,7 @@ print(f'{final}')
 text = 'NOTE'
 final = text.center(200, '-')
 print(final)
-print('If you input incorrect information the bot will not work correctly use the reset script to return the file to their original state, if you know you may do it yourself')
+print('If you input incorrect information the bot will not work correctly use the reset script to return the files to their original state, if you know you may do it yourself')
 print(final)
 token_name = input('What name would you like for your token? ')
 token = input('What is your token? ')
