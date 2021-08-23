@@ -13,14 +13,14 @@ def setup(token, token_name, whitelist_user=None, whitelist_server=None, whiteli
         whitelist["servers"] = [whitelist_server]
         with open('whitelist.json', 'w') as file:
             json.dump(whitelist, file, indent=5)
-        print('!--Will now run a powershell script to download ffmpeg and set environment path--!')
-        p = subprocess.Popen(['powershell.exe', 'setup.ps1'], stdout=sys.stdout)
-        p.communicate()
+        #print('!--Will now run a powershell script to download ffmpeg and set environment path--!')
+        #p = subprocess.Popen(['powershell.exe', 'setup.ps1'], stdout=sys.stdout)
+        #p.communicate()
         return print('Thank you')
     else:
-        print('!--Will now run a powershell script to download ffmpeg and set environment path--!')
-        p = subprocess.Popen(['powershell.exe', './setup.ps1'], stdout=sys.stdout)
-        p.communicate()
+        #print('!--Will now run a powershell script to download ffmpeg and set environment path--!')
+        #p = subprocess.Popen(['powershell.exe', './setup.ps1'], stdout=sys.stdout)
+        #p.communicate()
         return print('Thank you')
 
 
