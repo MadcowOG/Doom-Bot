@@ -7,7 +7,6 @@ cd 'ffmpeg-n4.4-80-gbf87bdd3f6-win64-gpl-4.4'
 cd bin
 $variable =  Get-Location
 # TODO! Get this to add a semi colon to the end of the current path
-$newvariable = ()
 $Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
 $NewPath = $Path + $variable
 [System.Environment]::SetEnvironmentVariable("Path", $NewPath, "Machine")
