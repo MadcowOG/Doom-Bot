@@ -9,7 +9,21 @@ I'm not sure what to put in here or whether what I'm going to write is the corre
 Please use this bot as you like, at the moment it is built to be hosted locally. But it is still a work in progress, so I would enjoy it if you provided some feedback and contributed a little. I am not sure what license to use, so I am going with GPLv2. I have not tested this version posted, on Windows yet, although I used previous versions on Windows. But this does not mean it works, any help with this would be appreciated.
 
 # Windows Prerequisites
- * Install the latest version of Python (As of August 14th, 2021 it is 3.9) through the Windows Store(This is recommended), or the [Python website](https://www.python.org/downloads/), and ffmpeg can be installed with these steps or by following [this video](https://youtu.be/M_6_GbDc39Q?t=129):
+ * Install the latest version of Python (As of August 14th, 2021 it is 3.9) through the Windows Store(This is recommended), or the [Python website](https://www.python.org/downloads/), and ffmpeg can be installed with these steps or by following [this video](https://youtu.be/M_6_GbDc39Q?t=129) or by using the setup script labelled `setup.py`:
+### Setup Script
+1. Before starting the setup script you will need to change some script policies, to do this open a powershell as administrator then type `Get-ExecutionPolicy -List` you should remember and save these policies and change them back to normal in the future. In order to allow the setup script to run do this command  `Set-ExecutionPolicy -ExecutionPolicy Unrestricted` then continue to step 2.
+
+2. Start the script with `python setup.py` in the same directory as the bot in powershell as adminstrator.
+
+3. Make sure that as you are typing in information that it is correct otherwise when the bot starts it will not work.
+
+4. The setup script will eventually ask if you would like to configure command whitelist, this is for a set of whitelisted commands, you will need to input user ids and server ids that you would like to be whitelisted.
+
+5. The script will ask you if you would like to download and configure ffmpeg, type yes if this isn't already done.
+
+6. After 
+
+### Manual ffmpeg Installation
 1.  Download ffmpeg from [here](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2021-08-14-12-36/ffmpeg-n4.4-80-gbf87bdd3f6-win64-gpl-4.4.zip)
 
 2. Extract this to somewhere and make sure it won't be deleted and **copy the path of the ffmpeg exes** in the bin directory of the ffmpeg extract.
@@ -25,7 +39,7 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
 7. You may test ffmeg by opening a command prompt(Type cmd into the windows search bar) and typing ffmpeg. If the first line reads the **ffmpeg version** then you have successfully installed ffmpeg.
 
 * Libraries required are, <span>discord.py<span>\[audio\], youtube_dl install them by using this command in powershell:
-    * `pip install "discord.py[audio]" youtube_dl`
+    * `pip install "discord.py[audio]" youtube_dl PyNaCl`
 
 # Prerequisites on other platforms
 * Must have the latest version of Python, and ffmpeg, these may be intalled with your OS's package manager.
@@ -38,6 +52,9 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
     * `pip install "discord.py[audio]" youtube_dl`
 
 # Setup
+ * **This is not required if you do the setup script**
+
+## Manual json setup
 1. Add to tokens.json
     * In tokens.json format your tokens inside the json brackets: {} like this:
  "place any name here, this will be used to select your token when you start the bot" : "Your token here"
@@ -66,11 +83,11 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
  }
  ```
 * Any songs added to the music directory manually must be mp3 and be in lowercase
-* If on **Windows** make sure that when **starting the bot**, you are using **powershell** and in the **same directory as the bot**.
+* If on **Windows** make sure that when **starting the bot**, you are using **Powershell** and in the **same directory as the bot**.
 
 # Invite Bot to Server
 
-You will need to make sure that the bot is running when it joins the server:
+You will need to make sure that the **bot is running when it joins the server**:
 
 1. Go to the [discord developer portal](https://discord.com/developers/applications) and sign in.
 
