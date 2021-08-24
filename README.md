@@ -21,7 +21,7 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
 
 5. The script will ask you if you would like to download and configure ffmpeg, type yes if this isn't already done.
 
-6. After this you may begin the bot creation and invitation steps.
+6. After you have ran the script it is recommended that you change the ExecutionPolicy back to their defaults. Then continue on to the Invite bot to server steps.
 
 ### Manual ffmpeg Installation
 1.  Download ffmpeg from [here](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2021-08-14-12-36/ffmpeg-n4.4-80-gbf87bdd3f6-win64-gpl-4.4.zip)
