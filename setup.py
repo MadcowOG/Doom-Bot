@@ -22,7 +22,7 @@ def ffmpeg_setup():
         print('Not on Windows -- If you are on windows and this appears please report a ticket at the github')
         sys.exit()
     print('!--Will now run a powershell script to download ffmpeg and set environment path--!')
-    p = subprocess.Popen(['powershell.exe', './setup.ps1'], stdout=sys.stdout)
+    p = subprocess.Popen(['powershell.exe', './Configs/setup.ps1'], stdout=sys.stdout)
     p.communicate()
     return print('ffmpeg downloaded and configured')
 

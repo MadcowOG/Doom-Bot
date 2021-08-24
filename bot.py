@@ -18,7 +18,7 @@ import youtube_dl
 
 # Queries server_prefixes.json file for prefixes based on guild id
 def get_prefix(bot, message):
-    with open('server_prefixes.json', 'r') as f:
+    with open('Configs/server_prefixes.json', 'r') as f:
         prefixes = json.load(f)
     return prefixes[str(message.guild.id)]
 
@@ -79,13 +79,13 @@ async def on_ready():
 # Adds new server to server_prefixes.json on join
 async def on_guild_join(guild):
     # Opens server server_prefixes.json
-    with open('server_prefixes.json', 'r') as f:
+    with open('Configs/server_prefixes.json', 'r') as f:
         prefixes = json.load(f)
     # Adds new server to json and makes prefix a period
     prefixes[str(guild.id)] = '.'
-    with open('server_prefixes.json', 'w') as f:
+    with open('Configs/server_prefixes.json', 'w') as f:
         json.dump(prefixes, f, indent=5)
-    with open('INTRO.txt', 'r') as doom:
+    with open('Extras/INTRO.txt', 'r') as doom:
         DOOM = '\n'.join(doom.readlines())
         await guild.text_channels[0].send(f'> {DOOM.center(1)}')
 
@@ -113,11 +113,11 @@ async def change_activity():
 # Changes prefix for bot in server
 async def change_prefix(ctx, prefix):
     # Loads server_prefixes.json
-    with open('server_prefixes.json', 'r') as f:
+    with open('Configs/server_prefixes.json', 'r') as f:
         prefixes = json.load(f)
     # Changes prefix in json based on guild id
     prefixes[str(ctx.guild.id)] = prefix
-    with open('server_prefixes.json', 'w') as f:
+    with open('Configs/server_prefixes.json', 'w') as f:
         json.dump(prefixes, f, indent=5)
     await ctx.send(f'Changed prefix for server {ctx.guild.name} to: {prefix}')
     print(f'Changed the prefix for server {ctx.guild.name} to: {prefix}')
@@ -208,7 +208,7 @@ async def return_input(ctx, *, user_input):
 # Clears all text in a given channel
 async def clear_all(ctx):
     # Checks to seee if message author is whitelisted
-    with open('whitelist.json') as f:
+    with open('Configs/whitelist.json') as f:
         data = json.load(f)
         if ctx.author.id not in data['users']:
             # await command not useful in practice / production environment
@@ -250,7 +250,7 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 
 @bot.command()
 async def wipe(ctx, *, reason=None):
-    with open('whitelist.json') as f:
+    with open('Configs/whitelist.json') as f:
         data = json.load(f)
         # if ctx.author.id not in data['users'] or ctx.guild.id not in data['servers']:
         if ctx.author.id not in data['users']:
@@ -274,7 +274,7 @@ async def wipe(ctx, *, reason=None):
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def k_wipe(ctx, *, reason=None):
-    with open('whitelist.json') as f:
+    with open('Configs/whitelist.json') as f:
         data = json.load(f)
         if ctx.author.id not in data['users']:
             # await command not useful in practice / production environment
@@ -294,7 +294,7 @@ async def k_wipe(ctx, *, reason=None):
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def c_wipe(ctx):
-    with open('whitelist.json') as f:
+    with open('Configs/whitelist.json') as f:
         data = json.load(f)
         if ctx.author.id not in data['users']:
             # await command not useful in practice / production environment
@@ -550,7 +550,7 @@ async def list_local_songs(ctx):
 # Deletes a song from the local library
 async def delete_local_song(ctx, *, name):
     # Checks if message author is one of the users that can use command
-    with open('whitelist.json') as f:
+    with open('Configs/whitelist.json') as f:
         data = json.load(f)
         if ctx.author.id in data['users']:
             # Removes file from the argument name
@@ -767,7 +767,7 @@ async def ping(ctx):
 
 @bot.command(brief='Displays the intro text')
 async def intro(ctx):
-    with open('INTRO.txt', 'r') as doom:
+    with open('Extras/INTRO.txt', 'r') as doom:
         DOOM = '\n'.join(doom.readlines())
         await ctx.send(f'> {DOOM.center(1)}')
 
@@ -779,7 +779,7 @@ async def intro(ctx):
 
 
 # Provides prompt before bot run, for token to be used, and forces while loop until correct answer
-with open('bot_start', 'r') as file:
+with open('Extras/bot_start', 'r') as file:
     DOOM = file.read()
     print(DOOM)
 text = 'Discord Bot'
@@ -790,7 +790,7 @@ extra_text = another_text.center(61,'=')
 print(f'{extra_text}\n')
 print('---------------------------------------')
 t_choice = input('What token do you want to run? ')
-with open('tokens.json', 'r') as file:
+with open('Configs/tokens.json', 'r') as file:
     tokens = json.load(file)
     correct_val = False
     while correct_val is False:
