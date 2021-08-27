@@ -1,7 +1,0 @@
-
-  Thank you for using
-**-------- DOOM ---------**
-        Start by trying:
-  .p experiment [doom]
- while in a voice channel
-**----------------------------**
