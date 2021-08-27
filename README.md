@@ -4,24 +4,34 @@
 I'm not sure what to put in here or whether what I'm going to write is the correct way to state these ideas, any help would be appreciated:
 ***
 
+# Prerequisites
 
-# Prologue
-Please use this bot as you like, at the moment it is built to be hosted locally. But it is still a work in progress, so I would enjoy it if you provided some feedback and contributed a little. I am not sure what license to use, so I am going with GPLv2. I have not tested this version posted, on Windows yet, although I used previous versions on Windows. But this does not mean it works, any help with this would be appreciated.
+* You will need the latest version **Python** and **Ffmpeg** and the python libraries **<span>discord.py<span> youtube_dl and PyNaCl**. You may install the python libraries with pip and the other programs with your platforms package manager.
 
-# Windows Prerequisites
- * Install the latest version of Python (As of August 14th, 2021 it is 3.9) through the Windows Store(This is recommended), or the [Python website](https://www.python.org/downloads/), and ffmpeg can be installed with these steps or by following [this video](https://youtu.be/M_6_GbDc39Q?t=129) or by using the setup script labelled `setup.py`:
-### Setup Script
-1. Before starting the setup script you will need to change some script policies, to do this open a powershell as administrator then type `Get-ExecutionPolicy -List` you should remember and save these policies and change them back to normal in the future. In order to allow the setup script to run do this command  `Set-ExecutionPolicy -ExecutionPolicy Unrestricted` then continue to step 2.
+* _Optional_:
+    * You may create a virtual environment for this bot with these commands while in the same directory as the bot:
+        * `python3 -m venv venv`
+        * `source ./venv/bin/activate`
 
-2. Start the script with `python setup.py` in the same directory as the bot in powershell as adminstrator.
+## Windows Prerequisites
 
-3. Make sure that as you are typing in information that it is correct otherwise when the bot starts it will not work.
+* If on Windows, you may download the latest version of python from the Windows Store, or from the [Python website](https://www.python.org/downloads/), and ffmpeg can be installed and configured with the setup.<nolink>py script which will be require you to follow the Change Execution Policies section, or by following [this video](https://youtu.be/M_6_GbDc39Q?t=129) or follwing the Manual ffmpeg Installation section.
 
-4. The setup script will eventually ask if you would like to configure command whitelist, this is for a set of whitelisted commands, you will need to input user ids and server ids that you would like to be whitelisted.
+* Once you have installed python you should install the required python libraries with this command:
+    * `pip install "discord.py[audio]" youtube_dl PyNaCl`
 
-5. The script will ask you if you would like to download and configure ffmpeg, type yes if this isn't already done.
+* _Optional_:
+    * This can only be done if you have done the Change Execution Policies section:
+        * You may create a virtual environment with these commands, while in the same directory as the bot:
+            * `python3 -m venv venv`
+            * `./venv/Scripts/activate`
 
-6. After you have ran the script it is recommended that you change the ExecutionPolicy back to their defaults. Then continue on to the Invite bot to server steps.
+### Change Execution Policies
+1. Before starting the setup script you will need to change some script policies, to do this open a powershell as administrator then type `Get-ExecutionPolicy -List` you should remember and save these policies and change them back to normal in the future. For more information about this please visit this [Microsfot Docs Page](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.1).
+
+2.  In order to allow the setup script to run do this command  `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`.
+
+* **Please note that this can make your computer unsafe, it is recommended that you return it to normal once the setup is finished.**
 
 ### Manual ffmpeg Installation
 1.  Download ffmpeg from [here](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2021-08-14-12-36/ffmpeg-n4.4-80-gbf87bdd3f6-win64-gpl-4.4.zip)
@@ -36,25 +46,47 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
 
 6. The **Edit environment variable** window will open, to the top right of the window there will be a button labelled **New**, click this and the paste the path of the ffmpeg exes you copied from earlier
 
-7. You may test ffmeg by opening a command prompt(Type cmd into the windows search bar) and typing ffmpeg. If the first line reads the **ffmpeg version** then you have successfully installed ffmpeg.
+7. You may test ffmeg by opening a command prompt(Type cmd into the windows search bar) and try running the command ffmpeg. If the first line reads the **ffmpeg version** then you have successfully installed ffmpeg.
 
-* Libraries required are, <span>discord.py<span>\[audio\], youtube_dl install them by using this command in powershell:
-    * `pip install "discord.py[audio]" youtube_dl PyNaCl`
+# Create the Bot
 
-# Prerequisites on other platforms
-* Must have the latest version of Python, and ffmpeg, these may be intalled with your OS's package manager.
-* _Optional:_
-    *  Create a virtual python environment, while in the same directory as the bot do these commands:
-        * `python3 -m venv venv`
-        * `source ./venv/bin/activate`
+1. Go to the [discord developer portal](https://discord.com/developers/applications) and sign in.
 
-* Libraries required are, <span>discord.py<span>\[audio\], youtube_dl install them in the terminal with this command:
-    * `pip install "discord.py[audio]" youtube_dl`
+2. Then while in the **Applications Tab** click **New Application** in the top right of the window.
+
+3. Name application whatever you'd like, preferably Doom(or a variation of it, as there are no similar names for apps), then click create.
+
+4. Once in the application menu switch to the **Bot Tab** located on the left of the window.
+
+5. Click the **Add Bot** button on the right of the window.
+
+6. There will be a **Token** label copy this token with the correlated button labelled **Copy** and keep it temporarily, keep this safe as anyone can run code with your bot if they have it.
+
+7. _Optional:_
+    * You may customize the name and icon of the bot as you wish
+
+* Keep this tab open you will need to return to it later.
 
 # Setup
- * **This is not required if you do the setup script**
 
-## Manual json setup
+* If you do not plan on using the Setup Script please move to the Manual Setup section.
+* You may use the script labeled setup<nolink>.py inorder to configure all of the json files it will direct you through the process, you should use the token retrieved in step 6 of the Create the Bot section when asked "What is your token?". When asked about the whitelist, you may input server ids and user ids for the people and servers that you want whitelisted commands to be used in and by. **These commands are volitile and a whitelist are required for them for a reason**.
+
+## Windows Setup
+
+* To use the setup script you will need to run powershell as administrator and change to the directory of the bot, the run the command:
+    * `python setup.py`
+* The script will move you through the configuration process view the text at the top of the the Setup section for more information on this process.
+    * Then at the end the script will ask you if you would like to download and configure ffmpeg, if you have not already done this please do, **However do note that you will have to have done the Change Execution Policies section**.
+    * Once this is finished please close and open powershell again, then try to run the command ffmpeg, if there is no error and in the output you see a version read, you will have successfully installed ffmpeg.
+* **Once the setup is complete it is recommended that you return your Execution Policies to normal**
+    * If you saved your Execution Policies before changing them, then you should use `Set-ExecutionPolicy` along with the correct corresponding arguments `-Scope` and `-ExecutionPolicy` **in an administrator powershell**. For more information on this command please visit this [Microsoft Docs Page](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.1).
+    * If you do not remember your Execution Policies or they were all **Undefined**, then you may just do this command:
+        * `Set-ExecutionPolicy -ExecutionPolicy Undefined`
+        * Then give a prompt, choose all, by entering `A`
+
+## Manual Setup
+* In the case that you are unable or do not want to use the setup script you may follow these steps to manually configure your json files.
 1. Add to tokens.json
     * In tokens.json format your tokens inside the json brackets: {} like this:
  "place any name here, this will be used to select your token when you start the bot" : "Your token here"
@@ -82,34 +114,26 @@ Please use this bot as you like, at the moment it is built to be hosted locally.
   ]
  }
  ```
-* Any songs added to the music directory manually must be mp3 and be in lowercase
-* If on **Windows** make sure that when **starting the bot**, you are using **Powershell** and in the **same directory as the bot**.
 
 # Invite Bot to Server
 
 You will need to make sure that the **bot is running when it joins the server**:
 
-1. Go to the [discord developer portal](https://discord.com/developers/applications) and sign in.
+1. Return to the [discord developer portal](https://discord.com/developers/applications).
 
-2. Then while in the **Applications Tab** click **New Application** in the top right of the window.
+2. Go to the **OAuth2 tab** on the left of the window.
 
-3. Name application whatever you'd like, preferably Doom(or a variation of it, as there are no similar names for apps), then click create.
+3. In here you will see a **Scopes section** click the **bot** check box. 
 
-4. Once in the application menu switch to the **Bot Tab** located on the left of the window.
+4. Then a **Bot Premissions section** and click the **Adminstrator** check box (You may check specific boxes besides Administrator if you understand which are required and which aren't, but this may break the bot or some functionalities of it).
 
-5. Click the **Add Bot** button on the right of the window.
+5. You will see under the **Scopes section** that there is a link generated, open this link and sign in with your discord, and add fill in the server that you would like the bot to be in, under the **Add to Server** tab. If the bot joins that server you have successfully added the bot and you use that token from earlier in the next **Setup** steps.
 
-6. There will be a **Token** label copy this token with the correlated button labelled **Copy** and keep it temporarily, keep this safe as anyone can run code with your bot if they have it.
+6. **Congrats your bot has been setup, if there are any issues please submit a ticket on the Github**
 
-7. _Optional:_
-    * You may customize the name and icon of the bot as you wish
+***
 
-8. Go to the **OAuth2 tab** on the left of the window.
+## Extra Notes
 
-9. In here you will see a **Scopes section** click the **bot** check box. 
-
-10. Then a **Bot Premissions section** and click the **Adminstrator** check box (You may check specific boxes besides Administrator if you understand which are required and which aren't, but this may break the bot or some functionalities of it).
-
-11. You will see under the **Scopes section** that there is a link generated, open this link and sign in with your discord, and add fill in the server that you would like the bot to be in, under the **Add to Server** tab. If the bot joins that server you have successfully added the bot and you use that token from earlier in the next **Setup** steps.
-
-12. **Congrats your bot has been setup, if there are any issues please submit a ticket on the Github**
+* You may add songs manually to the `Music` directory, however any songs added to the music directory manually **must be mp3 and names be in lowercase**.
+* In Windows if you encounter any issues with ffmpeg in powershell, or the command is not recognized, make sure your Windows is up to date and try restarting Windows. If neither fix the issue please submit a ticket in the github, and attempt to follow the Manual ffmpeg Installation section along with the [video provided](https://youtu.be/M_6_GbDc39Q?t=129).
