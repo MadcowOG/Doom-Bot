@@ -4,7 +4,7 @@
 
 # Prerequisites
 
-* You will need the latest version **Python** and **Ffmpeg** and the python libraries **<span>discord.py<span> youtube_dl and PyNaCl**. You may install the python libraries with pip and the other programs with your platforms package manager.
+* You will need the latest version **Python** and **Ffmpeg** and the python libraries **<span>discord.py<span> youtube_dl and PyNaCl**. You may install the python libraries with pip and the other programs with your platform's package manager.
 
 * _Optional_:
     * You may create a virtual environment for this bot with these commands while in the same directory as the bot:
