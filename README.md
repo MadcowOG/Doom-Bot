@@ -25,7 +25,7 @@
             * `./venv/Scripts/activate`
 
 ### Change Execution Policies
-1. Before starting the setup script you will need to change some script policies, to do this open a powershell as administrator then type `Get-ExecutionPolicy -List` you should remember and save these policies and change them back to normal in the future. For more information about this please visit this [Microsfot Docs Page](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.1).
+1. Before starting the setup script you will need to change some script policies, to do this open a powershell as administrator then type `Get-ExecutionPolicy -List` you should remember and save these policies and change them back to normal in the future. For more information about this please visit this [Microsoft Docs Page](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.1).
 
 2.  In order to allow the setup script to run do this command  `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`.
 
