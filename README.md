@@ -1,5 +1,5 @@
 # Doom - Bot
-**A mulit-purpose discord bot, built to be hosted locally.**
+**A multi-purpose discord bot, built to be hosted locally.**
 ***
 
 # Linux Prerequisites
