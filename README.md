@@ -2,16 +2,16 @@
 **A mulit-purpose discord bot, built to be hosted locally.**
 ***
 
-# Prerequisites
+# Linux Prerequisites
 
-* You will need the latest version **Python** and **Ffmpeg** and the python libraries **<span>discord.py<span> youtube_dl and PyNaCl**. You may install the python libraries with pip and the other programs with your platform's package manager.
+* You will need the latest version of **Python** and **Ffmpeg** and the python libraries **<span>discord.py<span> youtube_dl and PyNaCl**. You may install the python libraries with pip and the other programs with your platform's package manager or by any means you deem fit.
 
 * _Optional_:
     * You may create a virtual environment for this bot with these commands while in the same directory as the bot:
         * `python3 -m venv venv`
         * `source ./venv/bin/activate`
 
-## Windows Prerequisites
+# Windows Prerequisites
 
 * If on Windows, you may download the latest version of python from the Windows Store, or from the [Python website](https://www.python.org/downloads/), and ffmpeg can be installed and configured with the setup.<nolink>py script which will be require you to follow the Change Execution Policies section, or by following [this video](https://youtu.be/M_6_GbDc39Q?t=129) or follwing the Manual ffmpeg Installation section.
 
@@ -29,9 +29,10 @@
 
 2.  In order to allow the setup script to run do this command  `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`.
 
-* **Please note that this can make your computer unsafe, it is recommended that you return it to normal once the setup is finished.**
+* **Please note that this can make your computer insecure, it is recommended that you return it to normal once the setup is finished.**
 
 ### Manual ffmpeg Installation
+
 1.  Download ffmpeg from [here](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2021-08-14-12-36/ffmpeg-n4.4-80-gbf87bdd3f6-win64-gpl-4.4.zip)
 
 2. Extract this to somewhere and make sure it won't be deleted and **copy the path of the ffmpeg exes** in the bin directory of the ffmpeg extract.
@@ -68,7 +69,7 @@
 # Setup
 
 * If you do not plan on using the Setup Script please move to the Manual Setup section.
-* You may use the script labeled setup<nolink>.py inorder to configure all of the json files it will direct you through the process, you should use the token retrieved in step 6 of the Create the Bot section when asked "What is your token?". When asked about the whitelist, you may input server ids and user ids for the people and servers that you want whitelisted commands to be used in and by. **These commands are volitile and a whitelist are required for them for a reason**.
+* You may use the script labeled setup<nolink>.py inorder to configure all of the json files it will direct you through the process, you should use the token retrieved in step 6 of the Create the Bot section when asked "What is your token?". When asked about the whitelist, you may input server ids and user ids for the people and servers that you want whitelisted commands to be used in and by. **These commands are volatile and a whitelist are required for them for a reason**.
 
 ## Windows Setup
 
